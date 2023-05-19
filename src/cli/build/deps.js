@@ -6,6 +6,9 @@ import {
 
   // @ts-ignore
   lazyPostcssImport,
+  
+  // @ts-ignore
+  lazyPostcssNested,
 
   // @ts-ignore
   lazyCssnano,
@@ -33,6 +36,15 @@ export function loadPostcssImport() {
   } catch {}
 
   return lazyPostcssImport()
+}
+
+export function loadPostcssNested() {
+  // Try to load a local `postcss-nested` version first
+  try {
+    return require('postcss-nested')
+  } catch { }
+
+  return lazyPostcssNested()
 }
 
 export function loadCssNano() {
