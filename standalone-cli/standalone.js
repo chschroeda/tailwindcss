@@ -21,6 +21,7 @@ let localModules = {
   '@tailwindcss/typography': require('@tailwindcss/typography'),
 
   // These are present to allow them to be specified in the PostCSS config file
+  'tailwindcss/nesting': require('tailwindcss/nesting'),
   autoprefixer: require('autoprefixer'),
   tailwindcss: require('tailwindcss'),
 }
